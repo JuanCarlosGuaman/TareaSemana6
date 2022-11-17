@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Movil.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center" />
+        <Label x:Name="texto" Text="" />
+        <Button Text="Consultar" x:Name="btnGet" Clicked="btnGet_Clicked" />
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lbnombre" Text="{Binding nombre}"/>
+                            <Label x:Name="lbapellido" Text="{Binding apellido}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate> 
+            
+        </ListView>
+        <Button x:Name="btnIngresar" Text="Ingresar Datos" Clicked="btnIngresar_Clicked" ></Button>
+    </StackLayout>
+    
+</ContentPage>
